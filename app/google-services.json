@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "260368778390",
+    "project_id": "e-car-parking-system",
+    "storage_bucket": "e-car-parking-system.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260368778390:android:9756d57b8998361d606eb7",
+        "android_client_info": {
+          "package_name": "com.parkme.findparking"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJmP2tueY5LofXjoaNrDSD5yuWOZktwr0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260368778390:android:3a34ab6a201b251a606eb7",
+        "android_client_info": {
+          "package_name": "com.saleem.admingecarparking"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJmP2tueY5LofXjoaNrDSD5yuWOZktwr0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
+    id("com.google.gms.google-services")
+    alias(libs.plugins.googleAndroidLibrariesMapsplatformSecretsGradlePlugin)
 }
 
 android {
@@ -37,9 +39,13 @@ android {
     }
     buildFeatures{
         viewBinding = true
+        buildConfig = true
     }
 }
-
+kapt {
+    correctErrorTypes = true
+}
+//noinspection UseTomlInstead
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -51,6 +57,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    //maps
+    implementation(libs.play.services.maps)
+    implementation ("com.google.android.gms:play-services-location:21.2.0")
     //navigation components
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
@@ -78,5 +87,14 @@ dependencies {
 
     //Image picker
     implementation(libs.imagepicker)
+
+    //Firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
+
+    //Gson
+    implementation("com.google.code.gson:gson:2.10.1")
 
 }
