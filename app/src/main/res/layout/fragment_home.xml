@@ -35,12 +35,12 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/btnAddParkingArea"
-        android:layout_width="@dimen/_90sdp"
+        android:layout_width="@dimen/_100sdp"
         android:layout_height="@dimen/_80sdp"
         android:layout_marginTop="@dimen/_30sdp"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/btnAddParkingSpot"
+        app:layout_constraintEnd_toStartOf="@+id/btnManageSpaces"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvHome">
@@ -74,8 +74,8 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/btnAddParkingSpot"
-        android:layout_width="@dimen/_90sdp"
+        android:id="@+id/btnManageSpaces"
+        android:layout_width="@dimen/_100sdp"
         android:layout_height="@dimen/_80sdp"
         android:layout_marginTop="@dimen/_30sdp"
         app:cardCornerRadius="20dp"
@@ -97,14 +97,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/icon_add" />
+                app:srcCompat="@drawable/icon_manage" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:fontFamily="@font/medium_dm_sans"
-                android:text="Parking Spot"
+                android:text="Manage Spaces"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_12ssp"
                 app:layout_constraintEnd_toEndOf="parent"

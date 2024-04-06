@@ -17,10 +17,26 @@
             app:popExitAnim="@anim/slide_out"
             app:exitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/fade_in" />
+        <action
+            android:id="@+id/action_homeFragment_to_manageParkingFragment"
+            app:destination="@id/manageParkingFragment"
+            app:enterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/slide_out"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"/>
     </fragment>
     <fragment
         android:id="@+id/addParkingAreaFragment"
-        android:name="com.saleem.admingecarparking.ui.fragments.home.AddParkingAreaFragment"
+        android:name="com.saleem.admingecarparking.ui.fragments.home.addParking.AddParkingAreaFragment"
         android:label="fragment_add_parking_area"
         tools:layout="@layout/fragment_add_parking_area" />
+    <fragment
+        android:id="@+id/manageParkingFragment"
+        android:name="com.saleem.admingecarparking.ui.fragments.home.manageParking.ManageParkingFragment"
+        android:label="fragment_manage_parking"
+        tools:layout="@layout/fragment_manage_parking" >
+        <action
+            android:id="@+id/action_manageParkingFragment_to_addParkingAreaFragment"
+            app:destination="@id/addParkingAreaFragment" />
+    </fragment>
 </navigation>

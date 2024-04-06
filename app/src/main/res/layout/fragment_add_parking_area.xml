@@ -7,7 +7,7 @@
     android:background="@color/color_background"
     android:paddingHorizontal="@dimen/_20sdp"
     android:paddingTop="@dimen/_30sdp"
-    tools:context=".ui.fragments.home.AddParkingAreaFragment">
+    tools:context=".ui.fragments.home.addParking.AddParkingAreaFragment">
 
     <TextView
         android:id="@+id/textView"
@@ -26,23 +26,25 @@
         android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/carAddImage"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_130sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_15sdp"
-            app:cardCornerRadius="20dp"
-            android:layout_marginHorizontal="@dimen/_20sdp">
+            app:cardCornerRadius="20dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/appCompatTextView"
+                    android:id="@+id/tvAddImage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/regular_dm_sans"
@@ -58,6 +60,7 @@
                     android:id="@+id/imgParkingArea"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
+                    android:scaleType="centerCrop"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -66,18 +69,84 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnAddLocation"
-            android:text="Location Add"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etParkingName"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_42sdp"/>
+            android:layout_height="@dimen/_42sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/bg_edit_text"
+            android:fontFamily="@font/medium_dm_sans"
+            android:hint="Parking name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingHorizontal="15dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etLocationName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/bg_edit_text"
+            android:fontFamily="@font/medium_dm_sans"
+            android:hint="Location"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingHorizontal="15dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etPricePerHour"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/bg_edit_text"
+            android:fontFamily="@font/medium_dm_sans"
+            android:hint="Price per hour (PKR)"
+            android:inputType="number"
+            android:maxLines="1"
+            android:paddingHorizontal="15dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etNumSeats"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/bg_edit_text"
+            android:fontFamily="@font/medium_dm_sans"
+            android:hint="No. of Spots"
+            android:inputType="number"
+            android:maxLines="1"
+            android:paddingHorizontal="15dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etGoogleMapLocation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/bg_edit_text"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textCursorDrawable="@null"
+            android:fontFamily="@font/medium_dm_sans"
+            android:hint="Location from map"
+            android:inputType="none"
+            android:paddingHorizontal="15dp"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnOpenLocation"
-            android:text="Open location"
+            android:id="@+id/btnAddParking"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_42sdp"/>
-
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/bg_btn"
+            android:backgroundTint="@color/color_primary"
+            android:fontFamily="@font/bold_dm_sans"
+            android:text="Add Parking"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,6 +25,14 @@ fun View.invisible() {
     visibility = View.INVISIBLE
 }
 
+fun String.wrapWithRsHr(): String {
+    return "Rs $this/hr"
+}
+
+fun String.wrapWithSpots(): String {
+    return "$this Spots"
+}
+
 fun Activity.startActivity(destinationActivity: Class<*>) {
     val intent = Intent(this, destinationActivity)
     startActivity(intent)
